@@ -11,7 +11,7 @@ local function set_colorscheme()
   local result = handle:read("*a") -- NOTE: result is empty unless dark.
   handle:close()
 
-  local theme = (result:match("Dark") and "tokyonight-moon") or "tokyonight-day"
+  local theme = "tokyonight-moon"
   vim.cmd.colorscheme(theme)
 end
 
