@@ -41,9 +41,9 @@ vim.opt.foldenable = false
 vim.opt.foldmethod = "expr"   -- folding set to "expr" for treesitter based folding
 vim.opt.hlsearch = true         -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true       -- Ignore case letters when search
--- vim.opt.inccommand = 'split'
-vim.opt.signcolumn = "auto"
-vim.opt.laststatus = 1          -- Set global statusline
+vim.opt.inccommand = 'split'
+vim.opt.signcolumn = "no"
+vim.opt.laststatus = 2          -- Set global statusline
 vim.opt.linebreak = true        -- Wrap on word boundary
 vim.opt.number = true           -- Show line number
 vim.opt.numberwidth = 1         -- set number column width to 2 {default 4}
@@ -89,12 +89,12 @@ vim.opt.listchars = "tab:│ ,trail:·,nbsp:+"
 -----------------------------------------------------------
 vim.opt.backup = false                    -- 创建备份文件
 vim.opt.swapfile = false                  -- Don't use swapfile
-vim.opt.fileencoding = "utf-8" -- the encoding written to a file
-vim.opt.spell = false -- disable spell checking
-vim.opt.spelllang = "en" -- language for spell checking
+vim.opt.fileencoding = "utf-8"            -- the encoding written to a file
+vim.opt.spell = false                     -- disable spell checking
+-- vim.opt.spelllang = "en"                  -- language for spell checking
 vim.opt.undodir = vim.fn.stdpath("cache") .. "/undo"
 vim.opt.undofile = true -- enable persistent undo
-vim.opt.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program) it is not allowed to be edited
+vim.opt.writebackup = false               -- if a file is being edited by another program (or was written to file while editing with another program) it is not allowed to be edited
 
 -----------------------------------------------------------
 -- Memory, CPU
@@ -127,7 +127,6 @@ local disabled_built_ins = {
    "tar",
    "tarPlugin",
    "rrhelper",
-   "spellfile_plugin",
    "vimball",
    "vimballPlugin",
    "zip",
@@ -143,3 +142,5 @@ local disabled_built_ins = {
 for _, plugin in pairs(disabled_built_ins) do
    vim.g["loaded_" .. plugin] = 1
 end
+
+vim.lsp.enable('pyright')

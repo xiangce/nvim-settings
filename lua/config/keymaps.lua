@@ -39,16 +39,13 @@ map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
 
--- Reload configuration without restart nvim
+--
 map('n', '<leader>r', ':so %<CR>')
-
--- Fast saving with <leader> and s
 map('n', '<leader>w', ':w<CR>')
-
--- Close all windows and exit from Neovim with <leader> and q
-map('n', '<leader>q', ':qa!<CR>')
-
+map('n', '<leader>x', ':qa!<CR>')
+map('n', '<leader>q', ':q<CR>')
 map('n', '<leader>p', ':set paste<CR>')
+map('n', '<C-p>', ':FzfLua files<CR>')
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts

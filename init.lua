@@ -2,10 +2,8 @@
 require("config.keymaps")
 require("config.options")
 require("config.autocmds")
+
 require("config.lazy")
-require("config.lunline-config")
-require("config.nvim-tree-config")
-require("config.indent-config")
 
 
 local function set_colorscheme()
