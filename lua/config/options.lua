@@ -23,18 +23,10 @@ vim.opt.cmdheight = 1                       -- neovim 命令行中有更多空�
 vim.opt.conceallevel = 0                    -- so that `` is visible in markdown files
 vim.opt.cursorline = true                   -- highlight the current line
 
--- 离开插入模式时取消粘贴模式
-vim.api.nvim_create_autocmd(
-  "InsertLeave",
-  {
-    pattern = "*",
-    command = "set nopaste"
-  }
-)
-
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
+
 vim.opt.colorcolumn = '80'      -- Line lenght marker at 80 columns
 vim.opt.foldenable = false
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
@@ -65,10 +57,6 @@ vim.g.markdown_fenced_languages = {
     "bash=sh",
 }
 
--- 下划线
--- "\e[4:3m" 是用于下划线文本的 ANSI 转义序列，宽度为1像素
-vim.cmd([[let &t_Cs = "\e[4:3m"]])
-vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 -----------------------------------------------------------
 -- Tabs, indent

@@ -7,6 +7,7 @@ return {
     -- use opts = {} for passing setup options
     -- this is equivalent to setup({}) function
   },
+  { 'neoclide/coc.nvim' },
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
