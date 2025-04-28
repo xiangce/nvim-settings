@@ -42,8 +42,8 @@ map('n', '<C-l>', '<C-w>l')
 --
 map('n', '<leader>r', ':so %<CR>')
 map('n', '<leader>w', ':w<CR>')
-map('n', '<leader>x', ':qa!<CR>')
-map('n', '<leader>q', ':q<CR>')
+map('n', '<leader>q', ':q!<CR>')
+map('n', '<leader>x', ':wqa!<CR>')
 map('n', '<leader>p', ':set paste<CR>')
 map('n', '<C-p>', ':FzfLua files<CR>')
 
