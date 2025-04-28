@@ -108,8 +108,7 @@ autocmd("InsertLeave", {
 -- Don't do it when the position is invalid, when inside an event handler
 -- (happens when dropping a file on gvim) and for a commit message (it's
 -- likely a different one than last time).
-autocmd('BufReadPost',
-  {
+autocmd('BufReadPost', {
     group = vim.g.event,
     callback = function(args)
       local valid_line = vim.fn.line([['"]]) >= 1 and vim.fn.line([['"]]) < vim.fn.line('$')
@@ -118,6 +117,15 @@ autocmd('BufReadPost',
       if valid_line and not_commit then
         vim.cmd([[normal! g`"]])
       end
+    end,
+  }
+)
+
+-- AutoUpdate lazy
+autocmd("VimEnter", {
+    group = augroup("autoupdate", { clear = true }),
+    callback = function()
+      require("lazy").update({ show = false })
     end,
   }
 )
