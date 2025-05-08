@@ -122,10 +122,10 @@ autocmd('BufReadPost', {
 )
 
 -- AutoUpdate lazy
-autocmd("VimEnter", {
-    group = augroup("autoupdate", { clear = true }),
-    callback = function()
-      require("lazy").update({ show = false })
-    end,
-  }
-)
+-- autocmd("VimEnter", {
+--     group = augroup("autoupdate", { clear = true }),
+--     callback = function()
+--       require("lazy").update({ show = true })
+--     end,
+--   }
+-- )
