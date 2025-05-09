@@ -1,14 +1,19 @@
 return {
   { 'tpope/vim-endwise' },
   {
+    'smoka7/hop.nvim',
+    config = function()
+      require("hop").setup {
+        vim.api.nvim_set_keymap('n', '<leader>g', ':HopWord<CR>', {})
+      }
+    end
+  },
+  {
     "kylechui/nvim-surround",
-    version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
-      config = function()
-        require("nvim-surround").setup({
-        -- Configuration here, or leave empty to use defaults
-        })
-      end
+    config = function()
+      require("nvim-surround").setup {}
+    end
   },
   {
     'windwp/nvim-autopairs',

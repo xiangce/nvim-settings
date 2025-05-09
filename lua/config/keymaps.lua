@@ -40,7 +40,7 @@ map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
 
 --
-map('n', '<leader>r', ':so %<CR>')
+-- map('n', '<leader>r', ':so %<CR>')
 map('n', '<leader>w', ':wa<CR>')
 map('n', '<leader>x', ':wqa!<CR>')
 map('n', '<leader>q', ':q!<CR>')
